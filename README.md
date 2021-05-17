@@ -45,7 +45,7 @@ Contributors
 3. Yash Patil
 ----------------------------
 
-Thanks you
+Thanks you!!
 
 #dmw_miniproject #dmw #project #CLASSIFICATION_OF_ORTHOPEDIC_PATIENTS_USING_ML
 #ML #ORTHOPEDIC #PATIENTS #django #dml #testing
