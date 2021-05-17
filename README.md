@@ -41,7 +41,7 @@ Selenium Testing has been used for automation testing, you will probably need se
 ----------------------------
 Contributors
 1. Abhijit Shendage
-2. Suarabh Gore
+2. Saurabh Gore
 3. Yash Patil
 ----------------------------
 
