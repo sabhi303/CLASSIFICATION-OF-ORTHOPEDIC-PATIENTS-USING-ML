@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+    {% load static %}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sign Up</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% static 'fonts/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        html,
+        body {
+            height: 100%;
+            background: linear-gradient(to bottom right, #003366 40%, #009999 101%);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================================== -->
+    <!-- Sign  Up  page  -->
+    <div class="heading text-center" style="padding-top: 5%; "><a class="navbar-brand"
+        href="index">Classification &nbsp;of&nbsp; Orthopedic &nbsp;<br>Patients&nbsp; Using &nbsp;ML</a>
+    </div>
+    <!-- ============================================================== -->
+    <!-- card..  -->
+    <!-- ============================================================== -->
+    
+    <!-- ============================================================== -->
+    <div align="center" class="w-100">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-10 col-10 col-lg-4 col-md-4 col-sm-10 col-10">
+            <div class="card w-100" style="background: rgba(0, 0, 0, 0.2);">
+                <div class="card-header text-center" style="background: rgba(0, 0, 0, 0.0001);"><a class="navbar-brand"
+                        href="#">Sign Up</a>
+                </div>
+              
+                <div class="card-body">
+                    <div class="tab-content" id="myTabContent2">
+                       <div class="mess" style="color: white;">
+                           {% for message in messages %}
+                           <h3 style="color: white;"> {{ message }}</h3>
+                           {% endfor %}
+                       </div>
+                        <form id="my_form" method="POST" action="signup">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="form-group col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <input class="form-control form-control-lg bg-transparent " 
+                                        type="text" placeholder="First Name" autocomplete="off" name="fname" required>
+                                </div>
+                                <div class="form-group  col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <input class="form-control form-control-lg bg-transparent" id="last_name"
+                                        type="text" placeholder="Last Name " name="lname" autocomplete="off" required>
+                                </div>
+                                <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <input class="form-control form-control-lg bg-transparent border-0 pt-3" type="date"
+                                             placeholder="Date of Birth : " name="dob" autocomplete="off" required>
+                                </div>
+                                <div class="form-group  col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <input class="form-control form-control-lg bg-transparent" id="birth_date"
+                                        type="email" name="email" placeholder="E-Mail" autocomplete="off" required>
+                                </div>
+                                <div class="form-group  col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <input class="form-control form-control-lg bg-transparent" id="birth_date"
+                                        type="number" placeholder="Mobile Number" name="mobile" autocomplete="off" required>
+                                </div>
+                                
+                                <div class="form-group  col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                                    <input class="form-control form-control-lg bg-transparent" id="password"
+                                        type="password" placeholder="Password" name="password" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div class="card-header pills-regular border-0 w-100 pr-0 pl-0 bg-transparent">
+                                <ul class="nav nav-pills card-header-pills" id="myTab2" role="tablist">
+                                    <li class="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <a class="nav-link border-right" id="" href="login" role="tab">Alerady
+                                            an user?</a>
+                                    </li>
+                                    <li class="nav-item col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <a class="nav-link "
+                                            style="color:whitesmoke;background-color:  rgba(99, 30, 226, 0.747);"
+                                            onclick="document.getElementById('my_form').submit();">Register</a>
+                                    </li>
+                                </ul>
+                            </div>                        
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end login page  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+
+</html>
